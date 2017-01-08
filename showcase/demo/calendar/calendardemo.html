@@ -13,6 +13,11 @@
         </div>
         
         <div class="ui-g-12 ui-md-4">
+            <h3>Basic timeless</h3>
+            <p-calendar [(ngModel)]="date9"></p-calendar> {{date9}}
+        </div>
+        
+        <div class="ui-g-12 ui-md-4">
             <h3>Spanish</h3>
             <p-calendar [(ngModel)]="date2" [locale]="es" dateFormat="dd/mm/yy"></p-calendar> {{date2|date}}
         </div>
@@ -336,6 +341,12 @@ export class MyModel &#123;
                             <td>date</td>
                             <td>Type of the value to write back to ngModel, default is date and alternative is string.</td>
                         </tr>
+                        <tr>
+                            <td>timeless</td>
+                            <td>boolean</td>
+                            <td>false</td>
+                            <td>Whether to remove the time when dataType is date.</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -404,6 +415,11 @@ export class MyModel &#123;
     &lt;/div&gt;
     
     &lt;div class="ui-g-12 ui-md-4"&gt;
+        &lt;h3&gt;Basic timeless &lt;/h3&gt;
+        &lt;p-calendar [(ngModel)]="date9"&gt;&lt;/p-calendar&gt; &#123;&#123;date9&#125;&#125;
+    &lt;/div&gt;
+    
+    &lt;div class="ui-g-12 ui-md-4"&gt;
         &lt;h3&gt;Spanish&lt;/h3&gt;
         &lt;p-calendar [(ngModel)]="date2" [locale]="es" dateFormat="dd/mm/yy"&gt;&lt;/p-calendar&gt; &#123;&#123;date2|date&#125;&#125;
     &lt;/div&gt;
@@ -458,6 +474,8 @@ export class CalendarDemo &#123;
     date7: Date;
     
     date8: Date;
+    
+    date9: Date;
     
     minDate: Date;
     
